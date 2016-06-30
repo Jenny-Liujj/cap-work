@@ -4,7 +4,8 @@
 # You can define all roles on a single server, or split them:
 
 server '121.199.61.240', user: 'deployer', roles: %w{app db web}
-
+set :passenger_restart_command, 'passenger-config restart-app'
+set :passenger_restart_options, -> { "#{deploy_to} --ignore-app-not-running" }
 
 # role-based syntax
 # ==================
