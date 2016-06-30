@@ -34,6 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do
   gem 'pg'
+  gem 'sqlite3'
 end
 
 group :development, :test do
@@ -54,3 +55,8 @@ group :development, :test do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
 end
+
+
+bundle install
+bundle --binstubs
+cap --install
