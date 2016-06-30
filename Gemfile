@@ -55,8 +55,3 @@ group :development, :test do
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
 end
-
-
-bundle install
-bundle --binstubs
-cap --install
