@@ -1,10 +1,10 @@
-lock '3.4.0'
+lock '3.4.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@github.com:orendon/superprueba.git'
+set :application, 'cap-work'
+set :repo_url, 'https://liu7899@github.com/liu7899/cap-work.git'
 
 ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-set :deploy_to, '/home/deployer/superprueba'
+set :deploy_to, '/home/deployer/cap-work'
 set :scm, :git
 
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
